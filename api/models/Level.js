@@ -35,24 +35,17 @@ module.exports = {
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-    
+    sprites: {
+      type: 'json'
+    },
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    sprites: {
-      collection: 'Sprite',
-      via: 'level',
-      through: 'Character'
-    },
     users: {
       collection: 'User',
       via: 'level',
       through: 'Score'
-    },
-    characters: {
-      collection: 'Character',
-      via: 'level'
     },
     scores: {
       collection: 'Score',
