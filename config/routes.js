@@ -9,6 +9,7 @@
  */
 
 module.exports.routes = {
-
-
-};
+  'get /level': 'level.index',
+  'post /score': 'score.create',
+  'post /login': 'user.login'
+}

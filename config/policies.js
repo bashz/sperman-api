@@ -18,5 +18,6 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
-
+  'level/index': ['isLoggedIn'],
+  'score/create': ['isLoggedIn']
 };

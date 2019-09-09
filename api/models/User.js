@@ -16,7 +16,13 @@ module.exports = {
       type: 'string',
       required: true
     },
-
+    name: {
+      type: 'string'
+    },
+    totalScore: {
+      type: 'number',
+      defaultsTo: 0
+    },
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -29,6 +35,22 @@ module.exports = {
       collection: 'Level',
       via: 'user',
       through: 'Score'
+    },
+    scores: {
+      collection: 'Score',
+      via: 'user'
     }
+  },
+  async beforeCreate (user, next) {
+    try {
+      const level = await Level.findOne({level: 1})
+      user.levels = [level.id]
+    } catch (e) {
+      return next(e)
+    }
+    if (!user.name) {
+      user.name = `guest ${user.fbId}`
+    }
+    return next()
   }
 }
