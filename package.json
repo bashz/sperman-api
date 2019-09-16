@@ -15,6 +15,7 @@
     "nodemon": "^1.19.2"
   },
   "scripts": {
+    "update-front": "cp ../front/dist/* ./www -r",
     "dev": "./node_modules/.bin/nodemon NODE_ENV=development node app.js",
     "start": "NODE_ENV=production node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",

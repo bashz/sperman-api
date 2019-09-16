@@ -10,6 +10,9 @@
 
 module.exports.routes = {
   'get /level': 'level.index',
+  'get /level/:level': 'level.find-one',
+  'get /sprite': 'sprite.index',
   'post /score': 'score.create',
-  'post /login': 'user.login'
+  'post /login': 'user.login',
+  'get /scoreboard': 'user.scoreboard'
 }

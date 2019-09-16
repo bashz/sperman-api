@@ -43,10 +43,11 @@ module.exports = {
     if (score.score >= inputs.score) {
       return exits.noContent()
     } else {
+      let newScore
       try {
         await Score.updateOne({level: inputs.level, user: this.req.session.userId}).set({score: inputs.score})
         const user = await User.findOne({id: this.req.session.userId})
-        const newScore = user.totalScore + inputs.score - score.score
+        newScore = user.totalScore + inputs.score - score.score
         await User.updateOne({id: this.req.session.userId}).set({totalScore: newScore})
       } catch (e) {
         return exits.serverError(e)
@@ -56,7 +57,7 @@ module.exports = {
       try {
         nextScore = await Score.findOne({level: inputs.level + 1, user: this.req.session.userId})
         if (nextScore) {
-          return exits.success()
+          return exits.success({newScore})
         }
         nextLevel = await Level.findOne({level: inputs.level + 1})
       } catch (e) {
@@ -64,9 +65,9 @@ module.exports = {
       }
       if (nextLevel) {
         await Score.create({level: inputs.level + 1, user: this.req.session.userId})
-        return exits.created()
+        return exits.created({newScore})
       } else {
-        return exits.success()
+        return exits.success({endGame: true})
       }
     }
   }
