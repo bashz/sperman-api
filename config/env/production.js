@@ -149,7 +149,7 @@ module.exports = {
     ***************************************************************************/
     cors: {
       // allowOrigins: [
-      //   'https://example.com',
+      //   'https://sper-man.herokuapp.com',
       // ]
     },
 
@@ -220,10 +220,11 @@ module.exports = {
     * https://sailsjs.com/config/session#?the-session-id-cookie                *
     *                                                                          *
     ***************************************************************************/
+    secret: process.env.sessionSecret,
     cookie: {
-      // secure: true,
-      maxAge: 24 * 60 * 60 * 1000,  // 24 hours
-    },
+      secure: true,
+      maxAge: 3600000
+    }
 
   },
 
@@ -251,8 +252,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://example.com',
-      'https://staging.example.com',
+      'https://sper-man.herokuapp.com'
     ],
 
 
@@ -305,7 +305,7 @@ module.exports = {
     * (the "max-age" to include in the "Cache-Control" response header)        *
     *                                                                          *
     ***************************************************************************/
-    cache: 365.25 * 24 * 60 * 60 * 1000, // One year
+    cache: 300000, // 5 minutes
 
     /***************************************************************************
     *                                                                          *
@@ -322,7 +322,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 
@@ -371,9 +371,10 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://example.com',
-    internalEmailAddress: 'support@example.com',
-
+    baseUrl: 'https://sper-man.herokuapp.com',
+    fbSecret: process.env.fbSecret,
+    wipeFixtures: false,
+    loadFixtures: true,
     // mailgunDomain: 'mg.example.com',
     // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',
     // stripeSecret: 'sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm',

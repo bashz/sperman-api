@@ -6,11 +6,14 @@ module.exports = (sails) => {
     initialize(cb) {
       const eventsToWaitFor = ['hook:orm:loaded']
       sails.after(eventsToWaitFor, async () => {
-        if (sails.config.custom.loadFixtures && sails.config.models.migrate === 'drop') {
+        if (sails.config.custom.loadFixtures) {
           try {
-            await Promise.all(sprites.map(sprite => Sprite.create(sprite)))
-            await Promise.all(levels.map(level => Level.create(level)))
-            sails.log.debug('Fixtures were loaded successfully')
+            const existantSprites = await Sprite.find()
+            if (!existantSprites.length) {
+              await Promise.all(sprites.map(sprite => Sprite.create(sprite)))
+              await Promise.all(levels.map(level => Level.create(level)))
+              sails.log.debug('Fixtures were loaded successfully')
+            }
             return cb()
           } catch (e) {
             sails.log.error(e)
