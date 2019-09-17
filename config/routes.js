@@ -9,6 +9,7 @@
  */
 
 module.exports.routes = {
+  'post /': 'fb.index',
   'get /level': 'level.index',
   'get /level/:level': 'level.find-one',
   'get /sprite': 'sprite.index',
