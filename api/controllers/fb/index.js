@@ -1,3 +1,5 @@
+const crypto = require('crypto')
+
 module.exports = {
   friendlyName: 'Index',
   description: 'Validates that the request comes from facebook and redirects to /.',
