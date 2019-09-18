@@ -62,7 +62,8 @@ module.exports = {
     } catch (err) {
       return exits.serverError(err)
     }
-    this.req.session.cookie.maxAge = (inputs.expiresIn * 1000) || 3600000
+    // match cookies expiry with token expiery then the client can relogin if unauth
+    // this.req.session.cookie.maxAge = (inputs.expiresIn * 1000) || 3600000
     this.req.session.userId = user.id
     if (isNew) {
       return exits.created(user)

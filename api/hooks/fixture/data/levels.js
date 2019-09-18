@@ -3,8 +3,8 @@ module.exports = [
     level: 1,
     spawnCycle: 500,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -41,8 +41,8 @@ module.exports = [
     level: 2,
     spawnCycle: 500,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -51,7 +51,7 @@ module.exports = [
         y: 0.5,
         vx: 0,
         vy: 0.5,
-        vr: 1
+        vr: 2
       },
       {
         type: "germ",
@@ -88,15 +88,15 @@ module.exports = [
     level: 3,
     spawnCycle: 500,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
         name: "alpha",
         x: 0.5,
         y: 0.5,
-        vx: 0.5,
+        vx: -0.5,
         vy: 0,
         vr: 1
       },
@@ -107,7 +107,7 @@ module.exports = [
         y: 0.5,
         vx: 0.5,
         vy: 0,
-        vr: 1
+        vr: -1
       },
       {
         type: "germ",
@@ -144,8 +144,8 @@ module.exports = [
     level: 4,
     spawnCycle: 500,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -191,8 +191,8 @@ module.exports = [
     level: 5,
     spawnCycle: 500,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -238,8 +238,8 @@ module.exports = [
     level: 6,
     spawnCycle: 500,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -330,8 +330,8 @@ module.exports = [
     level: 7,
     spawnCycle: 600,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -422,8 +422,8 @@ module.exports = [
     level: 8,
     spawnCycle: 300,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -505,8 +505,8 @@ module.exports = [
     level: 9,
     spawnCycle: 400,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
@@ -561,14 +561,23 @@ module.exports = [
     level: 10,
     spawnCycle: 400,
     viscosity: 0.002,
-    maxScore: 50000,
-    minScore: 5000,
+    maxScore: 5000,
+    minScore: 500,
     sprites: [
       {
         type: "ovum",
         name: "alpha",
-        x: 0.5,
-        y: 0.5,
+        x: 0.8,
+        y: -0.6,
+        vx: 1,
+        vy: 0.7,
+        vr: 1
+      },
+      {
+        type: "ovum",
+        name: "alpha",
+        x: -0.8,
+        y: 0.6,
         vx: 1,
         vy: 0.7,
         vr: 1
@@ -644,8 +653,8 @@ module.exports = [
   //   level: 11,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -673,8 +682,8 @@ module.exports = [
   //   level: 12,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -702,8 +711,8 @@ module.exports = [
   //   level: 13,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -731,8 +740,8 @@ module.exports = [
   //   level: 14,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -760,8 +769,8 @@ module.exports = [
   //   level: 15,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -789,8 +798,8 @@ module.exports = [
   //   level: 16,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -818,8 +827,8 @@ module.exports = [
   //   level: 17,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -847,8 +856,8 @@ module.exports = [
   //   level: 18,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -876,8 +885,8 @@ module.exports = [
   //   level: 19,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -905,8 +914,8 @@ module.exports = [
   //   level: 20,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -934,8 +943,8 @@ module.exports = [
   //   level: 21,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -963,8 +972,8 @@ module.exports = [
   //   level: 22,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -992,8 +1001,8 @@ module.exports = [
   //   level: 23,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1021,8 +1030,8 @@ module.exports = [
   //   level: 24,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1050,8 +1059,8 @@ module.exports = [
   //   level: 25,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1079,8 +1088,8 @@ module.exports = [
   //   level: 26,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1108,8 +1117,8 @@ module.exports = [
   //   level: 27,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1137,8 +1146,8 @@ module.exports = [
   //   level: 28,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1166,8 +1175,8 @@ module.exports = [
   //   level: 29,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1195,8 +1204,8 @@ module.exports = [
   //   level: 30,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1224,8 +1233,8 @@ module.exports = [
   //   level: 31,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1253,8 +1262,8 @@ module.exports = [
   //   level: 32,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1282,8 +1291,8 @@ module.exports = [
   //   level: 33,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1311,8 +1320,8 @@ module.exports = [
   //   level: 34,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1340,8 +1349,8 @@ module.exports = [
   //   level: 35,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1369,8 +1378,8 @@ module.exports = [
   //   level: 36,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1398,8 +1407,8 @@ module.exports = [
   //   level: 37,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1427,8 +1436,8 @@ module.exports = [
   //   level: 38,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1456,8 +1465,8 @@ module.exports = [
   //   level: 39,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1485,8 +1494,8 @@ module.exports = [
   //   level: 40,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1514,8 +1523,8 @@ module.exports = [
   //   level: 41,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1543,8 +1552,8 @@ module.exports = [
   //   level: 42,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1572,8 +1581,8 @@ module.exports = [
   //   level: 43,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1601,8 +1610,8 @@ module.exports = [
   //   level: 44,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1630,8 +1639,8 @@ module.exports = [
   //   level: 45,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1659,8 +1668,8 @@ module.exports = [
   //   level: 46,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1688,8 +1697,8 @@ module.exports = [
   //   level: 47,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1717,8 +1726,8 @@ module.exports = [
   //   level: 48,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1746,8 +1755,8 @@ module.exports = [
   //   level: 49,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",
@@ -1775,8 +1784,8 @@ module.exports = [
   //   level: 50,
   //   spawnCycle: 500,
   //   viscosity: 0.002,
-  //   maxScore: 50000,
-  //   minScore: 5000,
+  //   maxScore: 5000,
+  //   minScore: 500,
   //   sprites: [
   //     {
   //       type: "ovum",

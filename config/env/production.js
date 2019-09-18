@@ -223,7 +223,7 @@ module.exports = {
     secret: process.env.sessionSecret,
     cookie: {
       secure: true,
-      maxAge: 3600000
+      maxAge: 3600000 * 24
     }
 
   },
