@@ -32,13 +32,5 @@ module.exports = {
       collection: 'User',
       via: 'currentRoom'
     }
-  },
-  async beforeUpdate(valuesToSet, next) {
-    console.log(valuesToSet)
-    // if (valuesToSet.length) {
-    //   const users = await User.find({currentRoom: valuesToSet[0].id})
-    //   valuesToSet.size = users.length
-    // }
-    next()
   }
 }
