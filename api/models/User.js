@@ -23,6 +23,10 @@ module.exports = {
       type: 'number',
       defaultsTo: 0
     },
+    isReady: {
+      type: 'boolean',
+      defaultsTo: false
+    },
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -39,6 +43,9 @@ module.exports = {
     scores: {
       collection: 'Score',
       via: 'user'
+    },
+    currentRoom: {
+      model: 'Room'
     }
   },
   async beforeCreate (user, next) {

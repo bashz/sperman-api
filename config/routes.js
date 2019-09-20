@@ -9,11 +9,21 @@
  */
 
 module.exports.routes = {
+  // app center post
   'post /': 'fb.index',
+  // login
+  'post /login': 'user.login',
+  // assets
+  'get /sprite': 'sprite.index',
+  // solo
   'get /level': 'level.index',
   'get /level/:level': 'level.find-one',
-  'get /sprite': 'sprite.index',
   'post /score': 'score.create',
-  'post /login': 'user.login',
-  'get /scoreboard': 'user.scoreboard'
+  'get /scoreboard': 'user.scoreboard',
+  // multi
+  'get /room/join': 'room.join',
+  'get /room/leave': 'room.leave',
+  'get /room/:room/:status': 'room.ready',
+  'get /multi/:room/:id': 'multi.index',
+  'post /multi/:room': 'multi.position' 
 }

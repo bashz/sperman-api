@@ -60,13 +60,20 @@ module.exports.sockets = {
   *                                                                          *
   ***************************************************************************/
 
-  // afterDisconnect: function(session, socket, done) {
-  //
-  //   // By default: do nothing.
-  //   // (but always trigger the callback)
-  //   return done();
-  //
-  // },
+  afterDisconnect: async function (session, socket, done) {
+    if (Object.keys(sails.adapters[sails.getDatastore().config.adapter].datastores).length) {
+      let player = null
+      try {
+        player = await User.findOne({ id: session.userId })
+        await User.updateOne({ id: session.userId }).set({ currentRoom: null })
+      } catch (e) {
+        return done(e)
+      }
+      sails.sockets.broadcast(player.currentRoom, 'left', { player }, this.req);
+      sails.sockets.leaveAll(player.currentRoom)
+    }
+    return done();
+  },
 
 
   /***************************************************************************

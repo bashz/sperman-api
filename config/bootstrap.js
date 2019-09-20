@@ -9,8 +9,14 @@
  * https://sailsjs.com/config/bootstrap
  */
 
-module.exports.bootstrap = async function() {
-
+module.exports.bootstrap = async function () {
+  sails.rooms = {}
+  try {
+    await Room.update({ isActive: true }).set({ isActive: false })
+    await User.update({ isReady: true }).set({ isRead: false })
+  } catch (e) {
+    throw e
+  }
   // By convention, this is a good place to set up fake data during development.
   //
   // For example:
