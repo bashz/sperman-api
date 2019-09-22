@@ -12,31 +12,6 @@ module.exports = {
       description: 'Id of the player.',
       required: true
     },
-    head: {
-      type: 'string',
-      description: 'Sperma head.',
-      required: true
-    },
-    mid: {
-      type: 'string',
-      description: 'Sperma mid.',
-      required: true
-    },
-    tail: {
-      type: 'string',
-      description: 'Sperma tail.',
-      required: true
-    },
-    x: {
-      type: 'number',
-      description: 'Position of the center of the sperma head.',
-      required: true
-    },
-    y: {
-      type: 'number',
-      description: 'Position of the center of the sperma head.',
-      required: true
-    },
     vx: {
       type: 'number',
       description: 'Vilocity x.',
@@ -45,11 +20,6 @@ module.exports = {
     vy: {
       type: 'number',
       description: 'Vilocity y.',
-      required: true
-    },
-    isStunned: {
-      type: 'number',
-      description: 'Remaing frames while stunned.',
       required: true
     }
   },
@@ -65,12 +35,7 @@ module.exports = {
     if (!this.req.isSocket) {
       return exits.badRequest(new Error('This is reserved to socket only'))
     }
-    sails.sockets.broadcast(inputs.room, 'foreign', {
-      id: inputs.id,
-      head: inputs.head,
-      mid: inputs.mid,
-      tail: inputs.tail
-    }, this.req);
+    sails.sockets.broadcast(inputs.room, 'foreign', {}, this.req);
     let unvulnerable = false
     const ovum = sails.rooms[inputs.room].ovum
     const distance = Math.sqrt((ovum.x - inputs.x) ** 2 + (ovum.y - inputs.y) ** 2);
