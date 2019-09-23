@@ -1,6 +1,6 @@
 module.exports = {
-  friendlyName: 'Position',
-  description: 'Broadcast a position.',
+  friendlyName: 'Collision',
+  description: 'Broadcast a collision.',
   inputs: {
     room: {
       type: 'string',
@@ -21,6 +21,11 @@ module.exports = {
       type: 'number',
       description: 'Vilocity y.',
       required: true
+    },
+    stunned: {
+      type: 'number',
+      description: 'Remaing frames while stunned.',
+      required: true
     }
   },
   exits: {
@@ -35,11 +40,12 @@ module.exports = {
     if (!this.req.isSocket) {
       return exits.badRequest(new Error('This is reserved to socket only'))
     }
-    sails.sockets.broadcast(inputs.room, 'newTarget', {
+    sails.sockets.broadcast(inputs.room, 'collision', {
       id: inputs.id,
       vx: inputs.vx,
-      vy: inputs.vy
-    }, this.req);
+      vy: inputs.vy,
+      stunned: inputs.stunned
+    });
     //return exits.success({});
   }
 }

@@ -25,5 +25,7 @@ module.exports.routes = {
   'get /room/leave': 'room.leave',
   'get /room/:room/:status': 'room.ready',
   'get /multi/:room/:id': 'multi.index',
-  'post /multi/:room': 'multi.position' 
+  'post /multi/:room': 'multi.target',
+  'post /multi/:room/collision': 'multi.collision',
+  'post /multi/:room/score': 'multi.score'
 }
