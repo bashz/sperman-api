@@ -27,5 +27,6 @@ module.exports.routes = {
   'get /multi/:room/:id': 'multi.index',
   'post /multi/:room': 'multi.target',
   'post /multi/:room/collision': 'multi.collision',
-  'post /multi/:room/score': 'multi.score'
+  'post /multi/:room/score': 'multi.score',
+  'post /multi/:room/sync': 'multi.sync'
 }

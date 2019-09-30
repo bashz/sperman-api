@@ -1,6 +1,6 @@
 module.exports = {
-  friendlyName: 'Collision',
-  description: 'Broadcast a collision.',
+  friendlyName: 'Score',
+  description: 'Broadcast a score.',
   inputs: {
     room: {
       type: 'string',

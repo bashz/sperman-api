@@ -61,7 +61,7 @@ module.exports.sockets = {
   ***************************************************************************/
 
   afterDisconnect: async function (session, socket, done) {
-    if (Object.keys(sails.adapters[sails.getDatastore().config.adapter].datastores).length) {
+    if (Object.keys(sails.adapters[sails.getDatastore().config.adapter].datastores).length && session.userId) {
       let player = null
       try {
         player = await User.findOne({ id: session.userId })

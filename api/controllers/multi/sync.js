@@ -1,6 +1,6 @@
 module.exports = {
-  friendlyName: 'Target',
-  description: 'Broadcast a target.',
+  friendlyName: 'Sync',
+  description: 'Periodacally sync all players positions.',
   inputs: {
     room: {
       type: 'string',
@@ -12,14 +12,19 @@ module.exports = {
       description: 'Id of the player.',
       required: true
     },
-    vx: {
-      type: 'number',
-      description: 'Vilocity x.',
+    tailX: {
+      type: ['number'],
+      description: 'Array of the x points of the sperma\'s tail.',
       required: true
     },
-    vy: {
+    tailY: {
+      type: ['number'],
+      description: 'Array of the y points of the sperma\'s tail.',
+      required: true
+    },
+    count: {
       type: 'number',
-      description: 'Vilocity y.',
+      description: 'Number responsible of the tail movement % speed.',
       required: true
     }
   },
@@ -35,10 +40,11 @@ module.exports = {
     if (!this.req.isSocket) {
       return exits.badRequest(new Error('This is reserved to socket only'))
     }
-    sails.sockets.broadcast(inputs.room, 'newTarget', {
+    sails.sockets.broadcast(inputs.room, 'sync', {
       id: inputs.id,
-      vx: inputs.vx,
-      vy: inputs.vy
+      tailX: inputs.tailX,
+      tailY: inputs.tailY,
+      count: inputs.count
     }, this.req);
     //return exits.success({});
   }
