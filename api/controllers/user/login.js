@@ -65,6 +65,7 @@ module.exports = {
     // match cookies expiry with token expiery then the client can relogin if unauth
     // this.req.session.cookie.maxAge = (inputs.expiresIn * 1000) || 3600000
     this.req.session.userId = user.id
+    sails.log.debug(user.name, ' has logged in')
     if (isNew) {
       return exits.created(user)
     }

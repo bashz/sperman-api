@@ -39,6 +39,9 @@ module.exports = {
     const allReady = room.players.length > 1 && room.players.every(p => p.isReady)
     sails.sockets.broadcast(inputs.room, 'ready', { allReady }, this.req)
     sails.sockets.broadcast(inputs.room, 'status', { player }, this.req);
+    if (allReady) {
+      sails.log.debug('game started', room.players.map(p => p.name))
+    }
     return exits.success({ player, allReady })
   }
 }
